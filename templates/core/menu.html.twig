@@ -1,0 +1,86 @@
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+        <a href="{{ path('app_client_accueil') }}" class="app-brand-link">
+            <img src="{{ asset('assets/img/poom/logo.png') }}" style="width: 25%;">
+            <span class="app-brand-text demo menu-text fw-bold">POUM</span>
+        </a>
+
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+            <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+        </a>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    <ul class="menu-inner py-1">
+        <!-- Apps & Pages -->
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text" data-i18n="Dashboard">Dashboard</span>
+        </li>
+        <li class="menu-item {% if 'accueil' in app.request.attributes.get('_route') %}active{% endif %}">
+            <a href="{{ path('app_client_accueil') }}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-mail"></i>
+                <div data-i18n="Dashboards">Dashboards</div>
+            </a>
+        </li>
+        <!-- Apps & Pages -->
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text" data-i18n="Gestion">Gestion</span>
+        </li>
+        <li class="menu-item {% if 'calendar' in app.request.attributes.get('_route') %}active{% endif %}">
+            <a href="{{ path('app_client_calendar') }}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-calendar"></i>
+                <div data-i18n="Calendar">Calendar</div>
+            </a>
+        </li>
+        <!-- e-commerce-app menu start -->
+        <li class="menu-item {% if 'products' in app.request.attributes.get('_route') %}active open{% endif %}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-shopping-cart"></i>
+                <div data-i18n="Stock">Stock</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {% if 'stock' in app.request.attributes.get('_route') %}active open{% endif %}">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <div data-i18n="Produits">Produits</div>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item {% if 'stock_list' in app.request.attributes.get('_route') %}active{% endif %}">
+                            <a href="{{ path('app_client_products_stock_list') }}" class="menu-link">
+                                <div data-i18n="liste">liste</div>
+                            </a>
+                        </li>
+                        <li class="menu-item {% if 'add_produit' in app.request.attributes.get('_route') %}active{% endif %}">
+                            <a href="{{ path('app_client_products_stock_add_produit') }}" class="menu-link">
+                                <div data-i18n="Ajout Produit">Ajout Produit</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item {% if 'reassort' in app.request.attributes.get('_route') %}active open{% endif %}">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <div data-i18n="Commande">Commande</div>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item {% if 'reassort' in app.request.attributes.get('_route') %}active{% endif %}">
+                            <a href="{{ path('app_client_products_reassort') }}" class="menu-link">
+                                <div data-i18n="Réassort">Réassort</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text" data-i18n="Organisation">Organisation</span>
+        </li>
+        <li class="menu-item">
+            <a href="app-kanban.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-layout-kanban"></i>
+                <div data-i18n="Kanban">Kanban</div>
+            </a>
+        </li>
+    </ul>
+</aside>
+<!-- / Menu -->

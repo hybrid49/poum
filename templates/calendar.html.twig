@@ -1,0 +1,172 @@
+
+{% include 'core/header.html.twig' %}
+    <body>
+        {% block body %}
+            <!-- Layout wrapper -->
+            <div class="layout-wrapper l ayout-content-navbar">
+                <div class="layout-container">
+                    <!-- Menu -->
+                    {% include 'core/menu.html.twig' %}
+                    <!-- Layout container -->
+                    <div class="layout-page">
+                        <!-- Navbar -->
+                        {% include 'core/navbar.html.twig' %}
+                        <!-- / Navbar -->
+
+                        <!-- Content wrapper -->
+                        <div class="content-wrapper">
+                            <!-- Content -->
+
+                            <div class="container-xxl flex-grow-1 container-p-y">
+                                <div class="card app-calendar-wrapper">
+                                    <div class="row g-0">
+                                        <!-- Calendar Sidebar -->
+                                        <div class="col app-calendar-sidebar" id="app-calendar-sidebar">
+                                            <div class="border-bottom p-4 my-sm-0 mb-3">
+                                                <div class="d-grid">
+                                                    <button
+                                                            class="btn btn-primary btn-toggle-sidebar"
+                                                            data-bs-toggle="offcanvas"
+                                                            data-bs-target="#addEventSidebar"
+                                                            aria-controls="addEventSidebar">
+                                                        <i class="ti ti-plus me-1"></i>
+                                                        <span class="align-middle">Add Event</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="p-3">
+                                                <!-- inline calendar (flatpicker) -->
+                                                <div class="inline-calendar"></div>
+
+                                                <hr class="container-m-nx mb-4 mt-3" />
+
+                                                <!-- Filter -->
+                                                <div class="mb-3 ms-3">
+                                                    <small class="text-small text-muted text-uppercase align-middle">Filter</small>
+                                                </div>
+
+                                                <div class="form-check mb-2 ms-3">
+                                                    <input
+                                                            class="form-check-input select-all"
+                                                            type="checkbox"
+                                                            id="selectAll"
+                                                            data-value="all"
+                                                            checked />
+                                                    <label class="form-check-label" for="selectAll">View All</label>
+                                                </div>
+
+                                                <div class="app-calendar-events-filter ms-3">
+                                                    <div class="form-check form-check-danger mb-2">
+                                                        <input
+                                                                class="form-check-input input-filter"
+                                                                type="checkbox"
+                                                                id="select-concert"
+                                                                data-value="concert"
+                                                                checked />
+                                                        <label class="form-check-label" for="select-concert">Concert</label>
+                                                    </div>
+                                                    <div class="form-check mb-2">
+                                                        <input
+                                                                class="form-check-input input-filter"
+                                                                type="checkbox"
+                                                                id="select-jeux"
+                                                                data-value="Jeux"
+                                                                checked />
+                                                        <label class="form-check-label" for="select-jeux">Jeux</label>
+                                                    </div>
+                                                    <div class="form-check form-check-warning mb-2">
+                                                        <input
+                                                                class="form-check-input input-filter"
+                                                                type="checkbox"
+                                                                id="select-rdv"
+                                                                data-value="Rdv"
+                                                                checked />
+                                                        <label class="form-check-label" for="select-rdv">Rdv</label>
+                                                    </div>
+                                                    <div class="form-check form-check-success mb-2">
+                                                        <input
+                                                                class="form-check-input input-filter"
+                                                                type="checkbox"
+                                                                id="select-reservation"
+                                                                data-value="Reservation"
+                                                                checked />
+                                                        <label class="form-check-label" for="select-reservation">Reservation</label>
+                                                    </div>
+                                                    <div class="form-check form-check-info">
+                                                        <input
+                                                                class="form-check-input input-filter"
+                                                                type="checkbox"
+                                                                id="select-autre"
+                                                                data-value="autre"
+                                                                checked />
+                                                        <label class="form-check-label" for="select-autre">Autre</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Calendar Sidebar -->
+
+                                        <!-- Calendar & Modal -->
+                                        <div class="col app-calendar-content">
+                                            <div class="card shadow-none border-0">
+                                                <div class="card-body pb-0">
+                                                    <!-- FullCalendar -->
+                                                    <div id="calendar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="app-overlay"></div>
+                                            <!-- FullCalendar Offcanvas -->
+                                            {% include 'calendar/modal.html.twig' %}
+                                        </div>
+                                        <!-- /Calendar & Modal -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / Content -->
+
+                            {% include 'core/footer.html.twig' %}
+                            <!-- / Footer -->
+
+                            <div class="content-backdrop fade"></div>
+                        </div>
+                        <!-- Content wrapper -->
+                    </div>
+                    <!-- / Layout page -->
+                </div>
+
+                <!-- Overlay -->
+                <div class="layout-overlay layout-menu-toggle"></div>
+
+                <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+                <div class="drag-target"></div>
+            </div>
+            <!-- / Layout wrapper -->
+
+
+            <script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/popper/popper.js') }}"></script>
+            <script src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/node-waves/node-waves.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/hammer/hammer.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/i18n/i18n.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/typeahead-js/typeahead.js') }}"></script>
+            <script src="{{ asset('assets/vendor/js/menu.js') }}"></script>
+
+
+            <script src="{{ asset('assets/vendor/libs/fullcalendar/fullcalendar.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/@form-validation/umd/bundle/popular.min.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/select2/select2.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/flatpickr/flatpickr.js') }}"></script>
+            <script src="{{ asset('assets/vendor/libs/moment/moment.js') }}"></script>
+
+            <script src="{{ asset('assets/js/main.js') }}"></script>
+
+            <script src="{{ asset('assets/js/app-calendar-events.js') }}"></script>
+            <script src="{{ asset('assets/js/app-calendar.js') }}"></script>
+
+        {% endblock %}
+    </body>
+</html>

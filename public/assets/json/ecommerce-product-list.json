@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "product_name": "Despérados",
+      "category": 0,
+      "stock": 1,
+      "sku": 25,
+      "price": "2€",
+      "qty": "dede",
+      "status": 3,
+      "image": "product-1.png",
+      "product_brand": "Super Retina XDR display footnote Pro Motion technology"
+    },
+    {
+      "id": 2,
+      "product_name": "Vin rouge truc",
+      "category": 1,
+      "stock": 1,
+      "sku": 10,
+      "price": "7.5€",
+      "qty": "Auchan",
+      "status": 2,
+      "image": "product-2.png",
+      "product_brand": "Echo Dot Smart speaker with Alexa"
+    },
+    {
+      "id": 3,
+      "product_name": "Punk IPA",
+      "category": 0,
+      "stock": 1,
+      "sku": 24,
+      "price": "2.35€",
+      "qty": "super U",
+      "status": 2,
+      "image": "product-3.png",
+      "product_brand": "Modern 10 Inch Battery Operated Wall Clocks"
+    },
+    {
+      "id": 4,
+      "product_name": "Bretz ice tea",
+      "category": 3,
+      "stock": 0,
+      "sku": 0,
+      "price": "2.69€",
+      "qty": "no sé",
+      "status": 4,
+      "image": "product-4.png",
+      "product_brand": "Lightweight Tennis Shoes Non Slip Gym Workout Shoes"
+    },
+    {
+      "id": 5,
+      "product_name": "Saucisson",
+      "category": 4,
+      "stock": 0,
+      "sku": 0,
+      "price": "2€",
+      "qty": "Vito",
+      "status": 1,
+      "image": "product-5.png",
+      "product_brand": "Starlight Aluminum Case with Starlight Sport Band."
+    },
+    {
+      "id": 5,
+      "product_name": "Rhum brun",
+      "category": 2,
+      "stock": 0,
+      "sku": 0,
+      "price": "15€",
+      "qty": "Vito",
+      "status": 1,
+      "image": "product-5.png",
+      "product_brand": "Starlight Aluminum Case with Starlight Sport Band."
+    }
+  ]
+}
